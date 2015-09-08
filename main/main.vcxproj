@@ -83,16 +83,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CaluArea.cpp" />
+    <ClCompile Include="NeuralNetwork.cpp" />
+    <ClCompile Include="NeuralNetworkLayer.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Cyclops\include\CVUtils.h" />
-    <ClInclude Include="..\..\Cyclops\include\GaussProbModel.h" />
-    <ClInclude Include="..\..\Cyclops\include\OnlineStatisticNode.h" />
-    <ClInclude Include="..\..\Cyclops\include\PerpixelTimeFieldFilter.h" />
-    <ClInclude Include="..\..\Cyclops\include\StatisticEle.h" />
-    <ClInclude Include="..\..\Cyclops\include\StdUtils.h" />
     <ClInclude Include="CaluArea.h" />
+    <ClInclude Include="NeuralNetwork.h" />
+    <ClInclude Include="NeuralNetworkLayer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,7 @@
 #include "cv.h"
 #include "highgui.h"
 #include "CaluArea.h"
+#include "ml\ml.hpp"
 
 using namespace cv;
 
@@ -10,7 +11,28 @@ struct block
 	int right;
 	int len;
 };
+#define MAX_CHAR_NUM 62
 
+class CharLib
+{
+public:
+	CharLib();
+
+	Mat m_Char[62]; //0~9 a~z, A~Z
+}; 
+
+//
+
+CharLib::CharLib()
+{
+	memset(m_Char, 0, sizeof(m_Char));
+// 	for (int i = 0; i < MAX_CHAR_NUM; i++)
+// 	{
+// 		char tmp[100];
+// 		sprintf_s(tmp, "f://test2//template//%d.bmp", i+1);
+// 		m_Char[i] = imread(tmp, 0);
+// 	}
+}
 
 vector<block> prjct2x(Mat &sobleX)
 {
@@ -139,20 +161,28 @@ block prjct2y(Mat &sobelY)
 
 	return vecBlock[bIndex];
 }
+
+double sim(Mat &src, Mat &com)
+{
+	return 1;
+}
+
 int main()
 {
-
+	CharLib m_objChar;
 	Mat imgBig = imread("f://test2//src.jpg", 0);
 
-	Mat src = imgBig(Rect(600, 350, 300, 100));
+	Mat src = imgBig(Rect(640, 370, 240, 80));
+
+	imwrite("f://src.tif", src);
 
 	threshold(src, src, 1, 255.0, THRESH_OTSU);
-	//threshold(src, src, 128, 255.0, THRESH_BINARY_INV);
+	threshold(src, src, 128, 255.0, THRESH_BINARY_INV);
 	//Mat src = imread("f://test2//2.jpg", 0);
 
 	Mat sobel_x, sobel_y;
-	threshold(src, sobel_x, 128, 255.0, THRESH_BINARY_INV);
-	threshold(src, sobel_y, 128, 255.0, THRESH_BINARY_INV);
+	threshold(src, sobel_x, 128, 255.0, THRESH_BINARY);
+	threshold(src, sobel_y, 128, 255.0, THRESH_BINARY);
 	//genSobelImage(src, &sobel_x, &sobel_y);
 
 	/***************** cut **********************/
@@ -163,30 +193,43 @@ int main()
 	sobel_x = sobel_x(Rect(0, yBlock.left, sobel_x.cols, yBlock.len));
 	vector<block> vecBlock = prjct2x(sobel_x);
 	
-	line(src, Point(0, yBlock.left), Point(src.cols, yBlock.left), Scalar(0), 1);
-	line(src, Point(0, yBlock.right), Point(src.cols, yBlock.right), Scalar(0), 1);
+	Mat show;
+	src.copyTo(show);
+	line(show, Point(0, yBlock.left), Point(src.cols, yBlock.left), Scalar(255), 1);
+	line(show, Point(0, yBlock.right), Point(src.cols, yBlock.right), Scalar(255), 1);
 	for (int i = 0; i < vecBlock.size(); i++)
 	{
-		line(src, Point(vecBlock[i].left, 0), Point(vecBlock[i].left, src.rows), Scalar(0), 1);
-		line(src, Point(vecBlock[i].right, 0), Point(vecBlock[i].right, src.rows), Scalar(0), 1);
+		line(show, Point(vecBlock[i].left, 0), Point(vecBlock[i].left, src.rows), Scalar(255), 1);
+		line(show, Point(vecBlock[i].right, 0), Point(vecBlock[i].right, src.rows), Scalar(255), 1);
 	}
-	
+	imwrite("f://test.png", src);
+
 	//**************** reg ********************//
-	//vecBlock[6].right -= 7;
-	//vecBlock[6].len -= 7;
 	for (int i = 0; i < vecBlock.size(); i++)
 	{
 		if (vecBlock[i].len > 10)
 		{
 			Rect rect(vecBlock[i].left, yBlock.left, vecBlock[i].len, yBlock.len);
 			Mat tmp = src(rect);
+			resize(tmp, tmp, Size(40, 50));
 			char str[203];
-			sprintf_s(str, "f://test2//%d-image.bmp", i);
+			sprintf_s(str, "f://test2//%d-image.tif", i);
 			imwrite(str, tmp);
+
+
+			
+			for (int i = 0; i < MAX_CHAR_NUM; i++)
+			{
+
+			}
+
+
+
+
 		}
 	}
 	
-
+//	KNearest knn = new KNearest(,);
 
 	/*
 	clc::CaluArea objArea;
