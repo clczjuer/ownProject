@@ -2,8 +2,10 @@
 #include "highgui.h"
 #include "CaluArea.h"
 #include "ml\ml.hpp"
+#include "process.h"
 
 using namespace cv;
+using namespace std;
 
 struct block
 {
@@ -13,26 +15,7 @@ struct block
 };
 #define MAX_CHAR_NUM 62
 
-class CharLib
-{
-public:
-	CharLib();
 
-	Mat m_Char[62]; //0~9 a~z, A~Z
-}; 
-
-//
-
-CharLib::CharLib()
-{
-	memset(m_Char, 0, sizeof(m_Char));
-// 	for (int i = 0; i < MAX_CHAR_NUM; i++)
-// 	{
-// 		char tmp[100];
-// 		sprintf_s(tmp, "f://test2//template//%d.bmp", i+1);
-// 		m_Char[i] = imread(tmp, 0);
-// 	}
-}
 
 vector<block> prjct2x(Mat &sobleX)
 {
@@ -167,9 +150,62 @@ double sim(Mat &src, Mat &com)
 	return 1;
 }
 
+void getROI(Mat &src, Mat &dst, vector<block> vecBlock, block yBlock, int index)
+{
+	Rect rect2 = Rect(vecBlock[index].left, yBlock.left, vecBlock[index].len, yBlock.len);
+	dst = src(rect2);
+}
+
+
+void thin(Mat &src, Mat &dst, vector<block> vecBlock, block yBlock, int index)
+{
+	getROI(src, dst, vecBlock, yBlock, index);
+
+	vector<vector<Point> > contour;
+	vector<Vec4i> hierarchy;
+	findContours(dst, contour, hierarchy, RETR_CCOMP, CHAIN_APPROX_NONE);
+
+	drawContours(dst, contour, 2, Scalar(255), -1, 8, hierarchy);
+	drawContours(dst, contour, 4, Scalar(255), -1, 8, hierarchy);
+	drawContours(dst, contour, 0, Scalar(255), -1, 8, hierarchy);
+	drawContours(dst, contour, 1, Scalar(0), -1, 8, hierarchy);
+	drawContours(dst, contour, 3, Scalar(0), -1, 8, hierarchy);
+
+	threshold(dst, dst, 1, 1, THRESH_BINARY);
+	//drawContours(dst, contour, 2, Scalar(255), -1, 8);
+	Mat tt;
+	Mat input;
+	dst.copyTo(input);
+	cvThin(input, tt, 1);
+	
+
+
+
+	int i = 0, j = 0;
+
+	for (i = 0; i < dst.rows; i++)
+	{
+		for (j = 0; j < dst.cols; j++)
+		{
+			if (tt.at<uchar>(i, j) == 1)
+			{
+				tt.at<uchar>(i, j) = 255;
+			}
+			else
+			{
+				tt.at<uchar>(i, j) = 0;
+			}
+		}
+	}
+	int s = -1;
+	//ThiningDIBSkeleton(dst.data, dst.cols, dst.rows);
+}
+
+
+
+
 int main()
 {
-	CharLib m_objChar;
 	Mat imgBig = imread("f://test2//src.jpg", 0);
 
 	Mat src = imgBig(Rect(640, 370, 240, 80));
@@ -202,7 +238,19 @@ int main()
 		line(show, Point(vecBlock[i].left, 0), Point(vecBlock[i].left, src.rows), Scalar(255), 1);
 		line(show, Point(vecBlock[i].right, 0), Point(vecBlock[i].right, src.rows), Scalar(255), 1);
 	}
-	imwrite("f://test.png", src);
+	//imwrite("f://test.png", src);
+
+
+	for (int i = 0; i < vecBlock.size(); i++)
+	{
+		Mat dst;
+		thin(src, dst, vecBlock, yBlock, i);
+		int sd = 1;
+	}
+	{
+
+	}
+	
 
 	//**************** reg ********************//
 	for (int i = 0; i < vecBlock.size(); i++)
@@ -229,6 +277,20 @@ int main()
 		}
 	}
 	
+// 	tesseract::TessBaseAPI api;
+// 	if (api.Init(NULL, "eng", tesseract::OEM_DEFAULT))
+// 	{
+// 		fprintf(stderr, "Could not initialize tesseract.\n");
+// 		return "err";
+// 	}
+// 
+// 	api.SetImage((unsigned char*)img_erode_dilate->imageData, img_erode_dilate->width,
+// 		img_erode_dilate->height, img_erode_dilate->nChannels, img_erode_dilate->widthStep);
+// 	api.SetVariable("tessedit_char_whitelist", "0123456789ABCDEFGHIJKLMNOPGRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
+// 	char* outText = api.GetUTF8Text();
+// 	return outText;
+
+
 //	KNearest knn = new KNearest(,);
 
 	/*
