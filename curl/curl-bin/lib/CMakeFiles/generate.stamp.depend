@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/LeaperCode/curl/lib/CMakeLists.txt
+C:/LeaperCode/curl/include/curl/curlbuild.h.cmake
+C:/LeaperCode/curl/lib/curl_config.h.cmake
+C:/LeaperCode/curl-bin/lib/Makefile.inc.cmake

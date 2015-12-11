@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{ABFF2A61-CF8F-42B2-92C3-7EC4C38F81A9}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LeaperCode\curl-bin\include\curl;C:\LeaperCode\curl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LeaperCode\curl-bin\include\curl;C:\LeaperCode\curl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LeaperCode\curl-bin\include\curl;C:\LeaperCode\curl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LeaperCode\curl-bin\include\curl;C:\LeaperCode\curl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\LeaperCode\curl\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/LeaperCode/curl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"E:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/LeaperCode/curl -BC:/LeaperCode/curl-bin --check-stamp-file C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/LeaperCode/curl/CMakeLists.txt;C:\LeaperCode\curl\CMakeLists.txt;C:\LeaperCode\curl\CMake\Utilities.cmake;C:\LeaperCode\curl\CMake\Macros.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeRCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckFunctionExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckTypeSize.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFileCXX.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;C:\LeaperCode\curl\CMake\Platforms\WindowsCache.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindOpenSSL.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\SelectLibraryConfigurations.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindZLIB.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckStructHasMember.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\LeaperCode\curl\CMake\OtherTests.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceRuns.cmake;C:\LeaperCode\curl\curl-config.in;C:\LeaperCode\curl\libcurl.pc.in;C:\LeaperCode\curl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/LeaperCode/curl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"E:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/LeaperCode/curl -BC:/LeaperCode/curl-bin --check-stamp-file C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/LeaperCode/curl/CMakeLists.txt;C:\LeaperCode\curl\CMakeLists.txt;C:\LeaperCode\curl\CMake\Utilities.cmake;C:\LeaperCode\curl\CMake\Macros.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeRCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckFunctionExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckTypeSize.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFileCXX.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;C:\LeaperCode\curl\CMake\Platforms\WindowsCache.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindOpenSSL.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\SelectLibraryConfigurations.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindZLIB.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckStructHasMember.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\LeaperCode\curl\CMake\OtherTests.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceRuns.cmake;C:\LeaperCode\curl\curl-config.in;C:\LeaperCode\curl\libcurl.pc.in;C:\LeaperCode\curl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/LeaperCode/curl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"E:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/LeaperCode/curl -BC:/LeaperCode/curl-bin --check-stamp-file C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/LeaperCode/curl/CMakeLists.txt;C:\LeaperCode\curl\CMakeLists.txt;C:\LeaperCode\curl\CMake\Utilities.cmake;C:\LeaperCode\curl\CMake\Macros.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeRCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckFunctionExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckTypeSize.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFileCXX.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;C:\LeaperCode\curl\CMake\Platforms\WindowsCache.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindOpenSSL.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\SelectLibraryConfigurations.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindZLIB.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckStructHasMember.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\LeaperCode\curl\CMake\OtherTests.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceRuns.cmake;C:\LeaperCode\curl\curl-config.in;C:\LeaperCode\curl\libcurl.pc.in;C:\LeaperCode\curl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/LeaperCode/curl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"E:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/LeaperCode/curl -BC:/LeaperCode/curl-bin --check-stamp-file C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/LeaperCode/curl/CMakeLists.txt;C:\LeaperCode\curl\CMakeLists.txt;C:\LeaperCode\curl\CMake\Utilities.cmake;C:\LeaperCode\curl\CMake\Macros.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\LeaperCode\curl-bin\CMakeFiles\3.3.1\CMakeRCCompiler.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckFunctionExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckTypeSize.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFile.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckIncludeFileCXX.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;C:\LeaperCode\curl\CMake\Platforms\WindowsCache.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindOpenSSL.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\SelectLibraryConfigurations.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindZLIB.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckStructHasMember.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\LeaperCode\curl\CMake\OtherTests.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceCompiles.cmake;E:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CheckCSourceRuns.cmake;C:\LeaperCode\curl\curl-config.in;C:\LeaperCode\curl\libcurl.pc.in;C:\LeaperCode\curl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\LeaperCode\curl-bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/ZERO_CHECK.vcxproj">
+      <Project>4B88FDAD-9EC8-4929-AFD8-F564B4FA3008</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/chkhostname.vcxproj">
+      <Project>93CA7F6A-5C82-435D-81D4-0B283EA0D415</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/src/curl.vcxproj">
+      <Project>8F5DE1CB-50B7-42B8-B6EF-D38AC570433C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/server/fake_ntlm.vcxproj">
+      <Project>31E6746A-3CB5-444F-8A9D-FD7FBB352B8E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/server/getpart.vcxproj">
+      <Project>B12BFEB7-CFF6-4035-A3B8-4D3B13036D1B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1500.vcxproj">
+      <Project>E3BF90F8-5EB7-41C1-A036-721307FDBD0F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1501.vcxproj">
+      <Project>A3952D69-F61D-45C2-BAF9-E58C57609FC6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1502.vcxproj">
+      <Project>E5AE125A-5D7E-493E-9FE2-4011D01BB556</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1503.vcxproj">
+      <Project>54BA01B1-5FD3-4B20-B403-0F2C3C556110</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1504.vcxproj">
+      <Project>5B059BBE-6077-4F03-834B-382F1617E6AD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1505.vcxproj">
+      <Project>27D40DAB-6676-4592-A5C0-E470E5AA30A5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1506.vcxproj">
+      <Project>2599D2DA-627F-48FC-81D9-9333717B0EFD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1507.vcxproj">
+      <Project>8F348BB6-2916-4EE6-8D16-CBD7BD5B3906</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1508.vcxproj">
+      <Project>B8ECA927-5486-4EAB-8D83-FE04A72F14D5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1509.vcxproj">
+      <Project>0A060419-735F-426C-9650-349081441D2B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1510.vcxproj">
+      <Project>B7501827-F309-40BE-8A20-F467B9FF7AF9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1511.vcxproj">
+      <Project>C70C69A0-6B48-4ED3-9947-7E6E32715A0B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1512.vcxproj">
+      <Project>2D9C176B-02BB-4C5F-85AB-9B0FA5636547</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1513.vcxproj">
+      <Project>48795B23-A110-438D-A52A-2045FA8678EB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1514.vcxproj">
+      <Project>1E5F88E6-1199-4D42-BF57-6F2A5CED472C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1515.vcxproj">
+      <Project>A2D7D23B-C8D0-49A4-B617-B8DF76B022E9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1520.vcxproj">
+      <Project>20CA56E6-968E-4FBC-80E9-EE9BDF0AFF4B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1525.vcxproj">
+      <Project>9AD8CE13-C925-48AB-ACB2-AAEDEC555E81</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1526.vcxproj">
+      <Project>1F4BBDC7-1760-4B35-8725-16B5C1CE1936</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1527.vcxproj">
+      <Project>A810B49D-3EB1-4B85-8429-9540AC45B46C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1528.vcxproj">
+      <Project>70BE0085-4509-4765-8390-3F2E1856DD69</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1529.vcxproj">
+      <Project>FD521581-4F0B-474C-A161-6FC5DFA70449</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1530.vcxproj">
+      <Project>420905E2-7F6F-4E32-8D5A-281EF03E9943</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1531.vcxproj">
+      <Project>6396EBEC-E3FF-49C0-9724-CAC47911E642</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib1900.vcxproj">
+      <Project>87B6C7C8-70A1-43D0-A695-D3F11515E0C8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib2033.vcxproj">
+      <Project>A1AE5FCE-AE13-43AF-9A45-5D0878F6C643</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib500.vcxproj">
+      <Project>A9D31D00-02EB-49BC-944D-F48ECE0B90F5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib501.vcxproj">
+      <Project>2D32E5AE-4676-4E11-B1A2-C5810F185941</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib502.vcxproj">
+      <Project>6D9E04AB-6889-4037-8E4F-93AF82122024</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib503.vcxproj">
+      <Project>B66C787C-1C92-4FD8-8DDD-74B271983A10</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib504.vcxproj">
+      <Project>501C2602-9A7C-48B9-BE69-62C343009EE9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib505.vcxproj">
+      <Project>97EA48EF-4476-499B-95F9-2E2972E31981</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib506.vcxproj">
+      <Project>3C0D1BEA-6E7B-4C50-9B7A-65C517F783B9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib507.vcxproj">
+      <Project>9BCF3B04-C50B-471D-907C-AA999F20B1F8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib508.vcxproj">
+      <Project>3C2A1B8A-7B78-475D-ACF0-D7B424AFBAC7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib509.vcxproj">
+      <Project>9C82DA9F-7604-4456-8E4B-849A60E0CD45</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib510.vcxproj">
+      <Project>48249B28-A22D-4F1C-B7B1-02092B2EDBC2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib511.vcxproj">
+      <Project>4B943C1A-442C-4ACF-9877-F509595531CF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib512.vcxproj">
+      <Project>73EB796E-7726-497D-A6F3-68D3C68538C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib513.vcxproj">
+      <Project>450B00A1-7040-4C09-AAA6-3D08A7623867</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib514.vcxproj">
+      <Project>0DB44C5D-9F6A-45C8-894E-41AD32B2B30E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib515.vcxproj">
+      <Project>3E3D8B48-16C7-4B63-A9F7-4B47566522E0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib516.vcxproj">
+      <Project>631ECCF4-85B1-443E-8DFD-1FF113FD5DA0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib517.vcxproj">
+      <Project>CEA58929-84E3-41E9-B649-2DFA30142004</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib518.vcxproj">
+      <Project>624470C4-FD2F-471A-BDBF-EF20452AC598</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib519.vcxproj">
+      <Project>7001C3DA-B834-4AE1-92D1-DD3A90305A2B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib520.vcxproj">
+      <Project>584C6B10-AE9A-4B07-A08C-36C439F57709</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib521.vcxproj">
+      <Project>2626FFFB-6284-4BB3-B21B-4612C744C05F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib523.vcxproj">
+      <Project>7863B180-2D74-4D90-A64B-BB6D5A207DBF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib524.vcxproj">
+      <Project>E51C09D6-19FA-49D2-8D65-5A123F79A877</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib525.vcxproj">
+      <Project>CF29F99B-5284-488C-9ABF-A1E2FAA91B2E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib526.vcxproj">
+      <Project>6D23415C-71EF-4951-A79A-4AA14292D7B3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib527.vcxproj">
+      <Project>38CA6C91-A6F4-4FCB-9676-88B063E38428</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib529.vcxproj">
+      <Project>77B4DF45-1474-484B-895B-CF79BA771091</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib530.vcxproj">
+      <Project>15CDE55C-464B-4280-BB1F-07126A672F54</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib532.vcxproj">
+      <Project>1A969F10-3A75-4F60-A5D4-05CF78809DEB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib533.vcxproj">
+      <Project>9857FF33-E9C8-467E-A191-0D14BC10ACDC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib536.vcxproj">
+      <Project>514727B3-F855-472D-8EFF-BC67B0A0D2E8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib537.vcxproj">
+      <Project>7CF8D66C-6FC4-481A-AFFC-DB0BE6CB8B7E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib539.vcxproj">
+      <Project>573DA75F-A43C-47B2-9DF1-979D0866FC57</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib540.vcxproj">
+      <Project>47F4D7CC-FA9A-4569-9B9B-DEBDF1237359</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib541.vcxproj">
+      <Project>7A2F1895-F763-4429-AC68-2FD64D3F03A8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib542.vcxproj">
+      <Project>930F7CD0-B489-4FAA-8B94-7514BA0DDA2E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib543.vcxproj">
+      <Project>1005C81D-E20D-44C3-A888-F8E41C37973B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib544.vcxproj">
+      <Project>1A36C624-5DA3-44F3-BD34-F67AE75CE05F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib545.vcxproj">
+      <Project>9C8C963E-6FD3-4A11-8F1D-671D327E57F2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib547.vcxproj">
+      <Project>300F810C-A91F-413B-9774-BA5F77FD3644</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib548.vcxproj">
+      <Project>E4D6245E-8903-49A6-A0DC-FE3C5B0BCED1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib549.vcxproj">
+      <Project>7E8758C3-1745-4B77-9E6E-9DF9C4A4BBB0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib552.vcxproj">
+      <Project>CFC5E7D5-09B9-4C74-9D54-408134F76340</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib553.vcxproj">
+      <Project>F5711441-298A-469F-A206-4CE374AFBFCE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib554.vcxproj">
+      <Project>F248A384-5035-4109-9197-B2EA52F6200F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib555.vcxproj">
+      <Project>42C979EE-65EB-4F1F-9C48-633CBF527068</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib556.vcxproj">
+      <Project>893F00EC-414A-4F3D-A5A8-338B32BC0EAB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib557.vcxproj">
+      <Project>ADD80C74-8686-4BD3-85E0-DD9B9B2512A8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib558.vcxproj">
+      <Project>D450D60E-205E-4FAF-AB6A-C43C8877E4CB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib560.vcxproj">
+      <Project>E93A3597-4170-493F-AC0A-7FEC1CCBA981</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib562.vcxproj">
+      <Project>185E5415-320B-4ADC-9FD2-9BC509A239F9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib564.vcxproj">
+      <Project>B66B56C7-F37A-4C4F-8CFA-C379F10663E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib565.vcxproj">
+      <Project>34274862-D27E-4D9C-A972-CC04741C52E0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib566.vcxproj">
+      <Project>5AC6FE95-1541-473A-BD03-96F5A9E2B2CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib567.vcxproj">
+      <Project>6977BBAF-A8AF-4686-8B0B-11CD3E429854</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib568.vcxproj">
+      <Project>81808116-69C0-42A1-9D62-0F98BFB37A6A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib569.vcxproj">
+      <Project>FE94868A-523B-4A0B-A125-06C534328483</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib570.vcxproj">
+      <Project>C0C58E57-A204-46E3-89AC-2A18F5A350A6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib571.vcxproj">
+      <Project>AB08AD5A-5072-4D35-A20E-8D790443BB88</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib572.vcxproj">
+      <Project>EA45A2FC-095B-4E00-9E27-67AEA57B4FA4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib573.vcxproj">
+      <Project>7AA18228-3857-49EC-B1A5-BC1F8BC8EAC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib574.vcxproj">
+      <Project>C8F6D60B-4E68-4786-A433-AA8145CAF476</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib575.vcxproj">
+      <Project>A5A885BE-ADEB-4793-B4E8-CB08C3CE5481</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib576.vcxproj">
+      <Project>124F9731-8EBE-4CBF-AD34-3B8A00043653</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib578.vcxproj">
+      <Project>9745A2DF-BF4D-4693-BE1F-F5F5566F49A9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib579.vcxproj">
+      <Project>5188494B-F421-42CC-BE2C-24891F797115</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib582.vcxproj">
+      <Project>737F2137-A40E-4F71-AC4C-2E210E7A4BAE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib583.vcxproj">
+      <Project>7FA399A7-D4AB-479A-AFA4-0D92303AC0DE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib585.vcxproj">
+      <Project>D37E4E3B-8A66-4EF4-9B6F-9C27DDF63FFB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib586.vcxproj">
+      <Project>AE7A32DA-0373-468D-AEEB-41DA57720E1F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib587.vcxproj">
+      <Project>66D04A9B-17A9-40AA-A559-3F3ABC189222</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib590.vcxproj">
+      <Project>2F85A19D-23CF-45DE-9B89-AF677C1C9601</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib591.vcxproj">
+      <Project>A27165D0-8CB4-4C4A-ABAE-4730D31CD4C3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib597.vcxproj">
+      <Project>AB926EB4-9295-49AE-AEF2-77C7BB88A677</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib598.vcxproj">
+      <Project>D3BBC42C-A6CF-4923-9387-09939B47F34E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/lib599.vcxproj">
+      <Project>28D94748-AFB5-4FC6-AB96-CD2281FA02A8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/libauthretry.vcxproj">
+      <Project>B8CBDFB6-7F9A-4F52-A460-4C66341E7854</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/lib/libcurl.vcxproj">
+      <Project>A1490D1B-A39E-4FFE-83A0-258A3F00B78D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/libtest/libntlmconnect.vcxproj">
+      <Project>3D4B7F68-7273-4E2E-B775-D30342B48852</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/server/resolve.vcxproj">
+      <Project>8951CF3C-6645-4270-B812-219EA31ED755</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/server/rtspd.vcxproj">
+      <Project>46EDC169-D3F5-44E5-83BB-3DDCE23B698B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/server/sockfilt.vcxproj">
+      <Project>2C50A496-25C4-43CB-8F65-96213C50C6D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/server/sws.vcxproj">
+      <Project>49515D58-4710-4065-A1F3-67DE14CADEFE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/LeaperCode/curl-bin/tests/server/tftpd.vcxproj">
+      <Project>1631EE48-77BC-4565-8557-2137E7A25757</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

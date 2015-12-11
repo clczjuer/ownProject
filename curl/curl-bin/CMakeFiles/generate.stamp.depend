@@ -1,0 +1,44 @@
+# CMake generation dependency list for this directory.
+C:/LeaperCode/curl/CMakeLists.txt
+C:/LeaperCode/curl/CMake/Utilities.cmake
+C:/LeaperCode/curl/CMake/Macros.cmake
+C:/LeaperCode/curl-bin/CMakeFiles/3.3.1/CMakeSystem.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeSystemSpecificInitialize.cmake
+C:/LeaperCode/curl-bin/CMakeFiles/3.3.1/CMakeCCompiler.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeSystemSpecificInformation.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeGenericSystem.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/Platform/Windows.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/Platform/WindowsPaths.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeCInformation.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/Platform/Windows-MSVC-C.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/Platform/Windows-MSVC.cmake
+C:/LeaperCode/curl-bin/CMakeFiles/3.3.1/CMakeRCCompiler.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeRCInformation.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeCommonLanguageInclude.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckFunctionExists.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckIncludeFile.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckIncludeFiles.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckLibraryExists.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckSymbolExists.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckTypeSize.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckIncludeFile.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckIncludeFileCXX.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckCSourceCompiles.cmake
+C:/LeaperCode/curl/CMake/Platforms/WindowsCache.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindOpenSSL.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/SelectLibraryConfigurations.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageHandleStandardArgs.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageMessage.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeParseArguments.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindZLIB.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageHandleStandardArgs.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageMessage.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeParseArguments.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckStructHasMember.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckCSourceCompiles.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckCXXSourceCompiles.cmake
+C:/LeaperCode/curl/CMake/OtherTests.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckCSourceCompiles.cmake
+E:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CheckCSourceRuns.cmake
+C:/LeaperCode/curl/curl-config.in
+C:/LeaperCode/curl/libcurl.pc.in
